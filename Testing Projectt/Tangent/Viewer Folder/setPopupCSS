@@ -1,0 +1,8 @@
+join with setTableCSS
+this function will adjust the div depending how many records is pulled
+
+string Viewer.setPopupCSS()
+{
+	css = ".zcpopup.compact .popupbox-wrapper .popupbox .popupboxOuter{padding:40px 40px 30px 40px}.zcpopup.compact .popupbox-wrapper .popupbox{border-radius:15px;overflow-y:auto!important}.zcpopup .zc-live-primary-btn,.zcpopup .zc-live-secondary-btn{border-radius:30px;color:#fff;padding:8px 25px;width:150px;margin-right:35px;font-size:16px;background-color:#e91e63;background-image:linear-gradient(to right,#e14758,rgba(161,84,143,.58))}.zcpopup.compact .popupbox-wrapper .popupbox .popupboxOuter .popupConentContainer .form-outer-wrapper{margin:40px 20px 20px 40px;padding:0}.popupbox-wrapper{pointer-events:none}.zcpopup.compact .popupbox-wrapper .popupbox{pointer-events:auto;}";
+	return css;
+}
