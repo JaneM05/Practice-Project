@@ -1,0 +1,135 @@
+string Viewer.cssDropdown()
+{
+	//Initiation
+	css_html = "";
+	//CSS Value
+	css_html = css_html + ".dropdown {";
+	css_html = css_html + "  	position: relative;";
+	css_html = css_html + "  	display: inline-block;";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > input[type=\"checkbox\"] {";
+	css_html = css_html + " 	position: absolute;";
+	css_html = css_html + "  	left: -100vw;";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > label,";
+	css_html = css_html + ".dropdown > a[role=\"button\"] {";
+	css_html = css_html + "  	display: inline-block;";
+	css_html = css_html + "  	padding: 7px 15px;";
+	css_html = css_html + "	font-family: 'Karla', sans-serif;		";
+	css_html = css_html + "	font-size:18px;";
+	css_html = css_html + "	font-weight:Bold;	";
+	css_html = css_html + "	color: #E54D4D;";
+	css_html = css_html + "	line-height: 1.5em;";
+	css_html = css_html + "	text-decoration: none;";
+	css_html = css_html + "	border: 0px solid #8c8c8c;";
+	css_html = css_html + "	cursor: pointer;";
+	css_html = css_html + "	-webkit-border-radius: 3px;";
+	css_html = css_html + "	-moz-border-radius: 3px;";
+	css_html = css_html + "	border-radius: 8px;";
+	css_html = css_html + "	width:80px;";
+	/*background-color: white;*/
+	/**box-shadow: 0px 10px 15px #E8E8E8;*/
+	/*margin-bottom: 15px;*/
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > label:hover,";
+	css_html = css_html + ".dropdown > a[role=\"button\"]:hover,";
+	css_html = css_html + ".dropdown > a[role=\"button\"]:focus {";
+	css_html = css_html + "  	border-color: transparent;";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > ul {";
+	css_html = css_html + "  	position: absolute;";
+	css_html = css_html + "  	z-index: 7;";
+	css_html = css_html + "	font-family: 'Karla', sans-serif;	";
+	css_html = css_html + "  	display: block;";
+	css_html = css_html + "  	left: -999999vw;";
+	css_html = css_html + "  	top: calc(1.5em + 14px);";
+	/*border: 1px solid #8c8c8c;*/
+	css_html = css_html + "  	background: #fff;";
+	css_html = css_html + "  	padding: 6px 0;";
+	css_html = css_html + "  	margin: 0;";
+	css_html = css_html + "  	list-style: none;";
+	css_html = css_html + "  	width: 100%;";
+	css_html = css_html + "  	-webkit-border-radius: 3px;";
+	css_html = css_html + "  	-moz-border-radius: 3px;";
+	css_html = css_html + "  	border-radius: 3px;";
+	css_html = css_html + "  	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);";
+	css_html = css_html + "  	-moz-box-shadow: 0 3px 8px rgba(0,0,0,.15);";
+	css_html = css_html + "  	box-shadow: 0 3px 8px rgba(0,0,0,.15);";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > ul a {";
+	css_html = css_html + "  	display: block;";
+	css_html = css_html + "  	padding: 6px 15px;";
+	css_html = css_html + "  	text-decoration: none;";
+	css_html = css_html + "  	color: #333;";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > ul a:hover,";
+	css_html = css_html + ".dropdown > ul a:focus {";
+	css_html = css_html + "  	background: #ececec;";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > input[type=\"checkbox\"]:checked ~ ul,";
+	css_html = css_html + ".dropdown > ul:target {";
+	css_html = css_html + "  	left: 0;";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > label:after,";
+	css_html = css_html + ".dropdown > a[role=\"button\"]:after {";
+	css_html = css_html + "  	content: \"\f078\";";
+	css_html = css_html + "  	font-family: FontAwesome;";
+	css_html = css_html + "  	display: inline-block;";
+	css_html = css_html + "	float:right;";
+	css_html = css_html + "	/*background-color: white;*/";
+	css_html = css_html + "	color: #606060;";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > [type=\"checkbox\"]:checked + label:after,";
+	css_html = css_html + ".dropdown > ul:target ~ a:after {";
+	css_html = css_html + "  	content: \"\f077\";";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown a.close {";
+	css_html = css_html + "  	display: none;";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > ul:target ~ a.close {";
+	css_html = css_html + "  	display: block;";
+	css_html = css_html + "  	position: absolute;";
+	css_html = css_html + "  	left: 0;";
+	css_html = css_html + " 	top: 0;";
+	css_html = css_html + "  	height: 100%;";
+	css_html = css_html + "  	width: 100%;";
+	css_html = css_html + "  	text-indent: -100vw;";
+	css_html = css_html + "  	z-index: 1000;";
+	css_html = css_html + "}";
+	css_html = css_html + ".item-link{";
+	css_html = css_html + "	cursor: pointer;";
+	css_html = css_html + "	color: #606060;";
+	css_html = css_html + "}";
+	//////// for notif dropdown
+	css_html = css_html + "dropdown > input[type=\"checkbox\"]:checked ~ ul, .dropdown > ul:target, .for-notif{";
+	css_html = css_html + "overflow: scroll;max-height: 500px;}";
+	css_html = css_html + ".dropdown > input[type=\"checkbox\"]:checked ~ .for-notif,";
+	css_html = css_html + ".dropdown > .for-notif:target {";
+	css_html = css_html + "  	left: -5.5em;";
+	css_html = css_html + "}";
+	css_html = css_html + ".link-drop {";
+	css_html = css_html + "  	padding:0;";
+	css_html = css_html + "  	border-bottom: 1px solid #ededed";
+	css_html = css_html + "}";
+	//////
+	css_html = css_html + ".dropdown > .drop-notif::after,";
+	css_html = css_html + ".dropdown > a[role=\"button\"]:after {";
+	css_html = css_html + "  	content: \"Notifications\";";
+	css_html = css_html + "  	font-family: \"Karla\", sans-serif;";
+	css_html = css_html + "  	font-size: 12px;";
+	css_html = css_html + "  	display: inline-block;";
+	css_html = css_html + "	float:right;";
+	css_html = css_html + "	/*background-color: white;*/";
+	css_html = css_html + "	color: #606060;";
+	css_html = css_html + "	line-height: .4em;";
+	css_html = css_html + "}";
+	css_html = css_html + ".dropdown > [type=\"checkbox\"]:checked + .drop-notif::after,";
+	css_html = css_html + ".dropdown > ul:target ~ a:after {";
+	css_html = css_html + "  	content: \"Notifications\";";
+	css_html = css_html + "	line-height: .4em;";
+	css_html = css_html + "}";
+	// 	css_html = css_html +"dropdown > input[type=\"checkbox\"]:not(:checked) ~ ul, .dropdown > ul:target, .for-notif{";
+	// 	css_html = css_html +"left: -100vw;overflow: scroll;max-height: 500px;}";
+	//return
+	return css_html;
+}
