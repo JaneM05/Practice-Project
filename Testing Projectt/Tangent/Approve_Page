@@ -1,0 +1,154 @@
+HTML SNIPPET
+
+<%{
+	%>
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+// 		<%=thisapp.Viewer.setMenuView()%>
+		<%=thisapp.Viewer.cssDropdown()%>
+// 		/* ang box nga naghold sa mga tabs */
+		<%=thisapp.Viewer.complieCommonCSS()%>
+// 		/*pop up form*/
+		<%=thisapp.Viewer.setPopupCSS()%>
+		
+		<%=thisapp.Viewer.setTableTabCSS()%>
+		
+		/* CSS Adjustments */
+		.ca-buttons-container{
+			padding: 20px;
+			display: block;
+			overflow: auto;
+			float: right;
+		}
+		.table-head-text{
+			padding: 15px 12px;
+			border-bottom: none;
+			background-color: #f2f2f2;
+			color: #212121;
+			font-weight: 500;
+		}
+		.ca-buttons-container .big-btn-pink-reverse{
+			display: block;
+			width: 110px;
+			margin-bottom: 0;
+		}
+		table tr:hover{
+			border: 1px solid #dbdbdb;
+			background-color: #ffffff;
+			box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+		}
+		table tr.no-hover{
+			border: none;
+			background-color: #f2f2f2;
+			box-shadow: none;
+		}
+		/* Release fund form info */
+		.popupbox table.release-fund-table{
+			width: 900px
+		}
+		.popupbox table.release-fund-table tr:nth-child(1){
+			background-color: #fafafa;
+		}
+		.popupbox table.release-fund-table tr:nth-child(1) td{
+			font-weight: 400;
+		}
+		.release-fund-table tr td{
+			padding: 8px 12px;
+		}
+		table.release-fund-table tr:hover {
+			border: none;
+			background-color: transparent;
+			box-shadow: none;
+		}
+		
+		table tr.active-class{
+			background-color: #ffffff;
+		}
+		table tr.active-class .item-link{
+			color: #212121;
+			font-weight: 500;
+		}
+/*		@media only screen and (max-width:800px){
+			
+		} */
+    </style>
+</head>
+
+<body>
+
+	
+	<div class="padding-low bg-gray" style="min-height:90vh">
+		<div class="menu-panel-container">
+
+		</div>
+    <div class="content-container">
+	<!--//END DROPDOWN CODE -->
+		 <div class="bg-white padding-low">
+			<div class="tab-wrap">
+
+			<!-- active tab on page load gets checked attribute -->
+				<input type="radio" id="tab1" name="tabGroup1" class="tab" >
+				<label for="tab1">Terminal Request </label>
+				
+				<input type="radio" id="tab2" name="tabGroup1" class="tab" >
+				<label for="tab2">Peripheral Request </label>
+				
+				<input type="radio" id="tab5" name="tabGroup1" class="tab" >
+				<label for="tab5">Accessories Request</label>
+				
+				<input type="radio" id="tab3" name="tabGroup1" class="tab" >
+				<label for="tab3">Banks </label>
+				
+				<!-- //Terminal Request -->
+				<div class="tab__content">
+					<table>
+						<tr class='no-hover'>
+							<th class='table-head-text' style='width: 30%'>Accessories Description</th>
+							<th class='table-head-text' style='width: 30%'>Quantity</th>
+							<th class='table-head-text' style='width: 30%'>UOM</th>
+							<th class='table-head-text' style='width: 20%'>Remarks</th>
+						</tr>
+					</table>
+				</div>
+				
+				<!-- //Peripheral Request -->
+				<div class="tab__content">
+					<table>
+						<tr class='no-hover'>
+							<th class='table-head-text' style='width: 20%'>Peripherals Serial Number</th>
+							<th class='table-head-text' style='width: 30%'>Peripheral Description</th>
+							<th class='table-head-text' style='width: 20%'>Quantity</th>
+							<th class='table-head-text' style='width: 20%'>UOM</th>
+							<th class='table-head-text' style='width: 20%'>Remarks</th>
+						</tr>
+						<%=thisapp.Viewer.showAllPeripherals()%>
+					</table>
+				</div>
+				
+				<!-- //Accessories Request -->
+				<div class="tab__content">
+					<table>
+						<tr class='no-hover'>
+							<th class='table-head-text' style='width: 30%'>Accessories Description</th>
+							<th class='table-head-text' style='width: 30%'>Quantity</th>
+							<th class='table-head-text' style='width: 30%'>UOM</th>
+							<th class='table-head-text' style='width: 20%'>Remarks</th>
+						</tr>
+						<%=thisapp.Viewer.showAllAccessories()%>
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<%
+
+}%>
