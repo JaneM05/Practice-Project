@@ -1,0 +1,16 @@
+CSS style in the left side of the page
+
+string Viewer.setMenuView()
+{
+	view_mode = "prod";
+	prod_style = ".pane_nav{display:none} .inner{background: #f7f8fa} .top_navbar .top_navbar_user .navbar_user_name:hover, .top_navbar .top_navbar_user .navbar_user_name{color:#212121} /*.inner{z-index: 999;}*/ .zc-header{z-index: -9} .popupboxOuter{z-index: 9999} .page_content_wrapper{top: 0} .zc-pb-embed-placeholder-content{min-height: 100vh;} .elemContainment{padding: 0px !important}";
+	if(view_mode == "prod")
+	{
+		add_css = prod_style;
+	}
+	else
+	{
+		add_css = "";
+	}
+	return add_css;
+}
